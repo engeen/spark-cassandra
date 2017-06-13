@@ -18,13 +18,13 @@
   #server "root@217.23.156.102", no_release: true,roles: %w{pmon}, ssh_options: { auth_methods: %w(publickey) } 
 
   #======deployment config ==============
-  server "62.213.76.77", user: 'deployer', roles: %w{app web db sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  server "62.213.76.78", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  server "217.23.156.98", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  server "217.23.156.99", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  server "217.23.156.100", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  server "217.23.156.101", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  server "217.23.156.102", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
+  # server "62.213.76.77", user: 'deployer', roles: %w{app web db sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
+  # server "62.213.76.78", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
+  # server "217.23.156.98", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
+  # server "217.23.156.99", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
+  # server "217.23.156.100", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
+  # server "217.23.156.101", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
+  # server "217.23.156.102", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
 
 
 

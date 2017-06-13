@@ -19,15 +19,15 @@ class ScheduleNode
 
   TRANSPORT_TYPES = OpenStruct.new(
     avia: 'avia',
-    rail: 'rail'
+    rail: 'rail',
+    auto: 'auto'
   )
 
   #column :id, :timeuuid, auto: true 
 
-	key    :departure_date, :timestamp  #extracted дата отправления
-	key    :cruise_num, :text					  #номер рейса/номер поезда
-	key    :days_before, :int           #за сколько дней до рейса
-	key    :source, :text
+  key    :carrier, :text
+  key    :cruise_num, :text      #номер рейса/номер поезда/маршрута
+	key    :departure, :timestamp  #дата отправления
 
 	column :transport_type, :text, :index => true #enumeration of transport type
 	column :cruise_duration, :int #duration in minutes

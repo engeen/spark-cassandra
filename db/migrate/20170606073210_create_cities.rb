@@ -8,7 +8,8 @@ class CreateCities < ActiveRecord::Migration[5.1]
       t.string :name_eng
       t.string :iata
       t.string :icao
-
+      t.decimal :lat
+      t.decimal :lon
       t.timestamps
     end
   end
