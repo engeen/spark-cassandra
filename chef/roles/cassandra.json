@@ -8,7 +8,7 @@
       	"jdk_version" : "8"
       },
       "cassandra" : {
-        "rpc_address" : "192.168.2.3"
+        "rpc_address" : "192.168.5.3"
       }
     },
     "override_attributes": {
