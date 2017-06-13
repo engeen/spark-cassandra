@@ -1,0 +1,20 @@
+{
+    "name": "redis",
+    "description": "This is a redis box server role",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+      
+    },
+    "override_attributes": {
+    },
+    "env_run_lists" : {
+        "development" : [
+
+        ],
+        "production" : [
+            "recipe[redis]"
+        ]
+
+    }
+}

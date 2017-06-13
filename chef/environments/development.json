@@ -1,0 +1,27 @@
+{
+  "name": "development",
+  "description": "This is a development environment",
+  "chef_type": "environment",
+  "json_class": "Chef::Environment",
+  "default_attributes": {
+    "pmon_spark" : {
+      "cassandra_ip" : "192.168.5.3"
+    },
+    "papertrail" : {
+      "host_name" : "pmon.dev",
+      "log_host" : "logs.papertrailapp.com",
+      "log_host_port" : "54321",
+      "log_files" : [
+        "/home/vagrant/app/log/parsing.log"
+      ]
+    }
+  },
+  "override_attributes": {
+  	"postgresql": {
+  		"version": "9.5",
+  		"password": {
+  			"postgres": "[eqghfccsim,kz"
+  		}
+  	}
+  }
+}

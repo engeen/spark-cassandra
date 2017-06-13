@@ -1,0 +1,7 @@
+name             'xvfb'
+maintainer       'Max'
+maintainer_email 'unknown@unknown.unknown'
+license          'All rights reserved'
+description      'Installs/Configures xvfb'
+long_description 'Installs/Configures xvfb'
+version          '0.1.0'

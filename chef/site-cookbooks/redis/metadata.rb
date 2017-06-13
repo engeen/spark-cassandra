@@ -1,0 +1,15 @@
+name 'redis'
+maintainer 'Yuriy Novikov'
+maintainer_email 'jv.novikov@agileprofi.ru'
+license 'all_rights'
+description 'Installs/Configures ruby'
+long_description 'Installs/Configures ruby'
+version '0.1.0'
+
+
+# recipe 'pmon_spark::default', 'Installs spark with cassandra connector'
+# recipe 'pmon_spark::run', 'Copies connector and starts thrift server'
+#depends 'rvm', '~> 0.9.4'
+# depends 'java', '~> 1.50.0'
+# depends 'firewalld', '~> 1.1.5'
+#depends 'tar', '= 0.0.3'

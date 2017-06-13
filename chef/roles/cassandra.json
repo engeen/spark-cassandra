@@ -1,0 +1,27 @@
+{
+    "name": "cassandra",
+    "description": "This is a cassandra box server role",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+      "java" : {
+      	"jdk_version" : "8"
+      },
+      "cassandra" : {
+        "rpc_address" : "192.168.2.3"
+      }
+    },
+    "override_attributes": {
+    },
+    "env_run_lists" : {
+        "development" : [
+    			"recipe[java]",
+    			"recipe[pmon_cassandra]"
+        ],
+        "production" : [
+          "recipe[java]",
+          "recipe[pmon_cassandra]"
+        ]
+
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "spark",
+    "description": "This is a spark box server role",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+      "java" : {
+      	"jdk_version" : "8"
+      }
+    },
+    "override_attributes": {
+    },
+    "env_run_lists" : {
+        "development" : [
+    			"recipe[java]",
+    			"recipe[pmon_spark::default]",
+          "recipe[pmon_spark::run]"
+        ],
+        "production" : [
+          "recipe[java]",
+          "recipe[pmon_spark::default]",
+          "recipe[pmon_spark::run]"
+        ]
+
+    }
+}

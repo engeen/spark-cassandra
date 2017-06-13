@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="col-md-2"></div>
+
+<div class="col-md-8">
+  <table class="table table-striped table-bordered">
+    <tbody>
+      <tr>
+        <td class="text-right"><strong>Name</strong></td>
+        <td><%= @city.name %></td>
+      </tr>
+
+      <tr>
+        <td class="text-right"><strong>Inner code</strong></td>
+        <td><%= @city.inner_code %></td>
+      </tr>
+
+      <tr>
+        <td class="text-right"><strong>Adm code</strong></td>
+        <td><%= @city.adm_code%></td>
+      </tr>
+
+      <tr>
+        <td class="text-right"><strong>Tutu code</strong></td>
+        <td><%= @city.tutu_code%></td>
+      </tr>
+
+      <tr>
+        <td class="text-right"><strong>Name eng</strong></td>
+        <td><%= @city.name_eng %></td></td>
+      </tr>
+
+      <tr>
+        <td class="text-right"><strong>Iata</strong></td>
+        <td><%= @city.iata %></td>
+      </tr>
+
+      <tr>
+        <td class="text-right"><strong>Icao</strong></td>
+        <td><%= @city.icao %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="col-md-2"></div>
+</div>
+
+<br>
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="text-right col-md-8">
+  <%= link_to 'Редактировать', edit_city_path(@city) %> |
+  <%= link_to 'Назад', cities_path %>
+</div>
+<div class="col-md-2"></div>
+</div>

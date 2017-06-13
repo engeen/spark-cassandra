@@ -1,0 +1,7 @@
+name             'papertrail'
+maintainer       'Max'
+maintainer_email 'unknown@unknown.unknown'
+license          'All rights reserved'
+description      'Installs/Configures papertrail remote logger'
+long_description 'Installs/Configures papertrail remote logger'
+version          '0.1.0'

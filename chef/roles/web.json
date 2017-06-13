@@ -1,0 +1,21 @@
+{
+    "name": "web",
+    "description": "This is an web box server role",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+      
+    },
+    "override_attributes": {
+    },
+    "env_run_lists" : {
+        "development" : [
+
+        ],
+        "production" : [
+            "recipe[chef_nginx]"
+
+        ]
+
+    }
+}
