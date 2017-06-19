@@ -5,7 +5,7 @@
   "json_class": "Chef::Environment",
   "default_attributes": {
     "pmon_spark" : {
-      "cassandra_ip" : "212.24.39.19"
+      "cassandra_ip" : "212.24.39.34"
     }
   },
   "override_attributes": {
@@ -13,12 +13,14 @@
       "user" : "deployer" 
     },
     "cassandra" : {
-      "rpc_address" : "212.24.39.19"
+      "rpc_address" : "212.24.39.34",
+      "seeds" : "212.24.39.34, 212.24.39.35, 212.24.39.36, 212.24.39.37, 212.24.39.38",
+      "cluster_name" : "MMPGraph"
     },
   	"postgresql": {
   		"version": "9.5",
       "config" : {
-        "listen_addresses" : "0.0.0.0, 62.213.76.77"
+        "listen_addresses" : "0.0.0.0, 212.24.39.19"
       },
   		"password": {
   			"postgres": "[eqghfccsim,kz"
@@ -28,51 +30,9 @@
         "type" :  "host",
         "db" : "all",
         "user" : "all", 
-        "addr" : "217.23.156.100/32", 
+        "addr" : "212.24.39.19/32", 
         "method" : "md5"
-      },
-      {
-        "type" :  "host",
-        "db" : "all",
-        "user" : "all", 
-        "addr" : "217.23.156.101/32", 
-        "method" : "md5"
-      },
-      {
-        "type" :  "host",
-        "db" : "all",
-        "user" : "all", 
-        "addr" : "217.23.156.102/32", 
-        "method" : "md5"
-      },
-      {
-        "type" :  "host",
-        "db" : "all",
-        "user" : "all", 
-        "addr" : "217.23.156.98/32", 
-        "method" : "md5"
-      },
-      {
-        "type" :  "host",
-        "db" : "all",
-        "user" : "all", 
-        "addr" : "217.23.156.99/32", 
-        "method" : "md5"
-      },
-      {
-        "type" :  "host",
-        "db" : "all",
-        "user" : "all", 
-        "addr" : "62.213.76.77/32", 
-        "method" : "md5"
-      },
-      {
-        "type" :  "host",
-        "db" : "all",
-        "user" : "all", 
-        "addr" : "62.213.76.78/32", 
-        "method" : "md5"
-      }    ]
+      } ]
 
   	}
   }

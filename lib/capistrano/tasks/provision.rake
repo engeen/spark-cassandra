@@ -35,11 +35,12 @@ namespace :provision do
           end
           #binding.pry 
           _pk_setting = "-i#{server.ssh_options[:keys][0]}" if server.ssh_options.has_key?(:keys) && server.ssh_options[:keys].is_a?(Array)
+          _port_settings = "-p #{server.ssh_options[:port]}" if server.ssh_options.has_key?(:port)
           _server_roles = server.properties.roles.to_a.map{|r| "role[#{r}]"}.join(",")#server.properties.roles.to_a.join(",")#
-          _command = "cd chef && knife solo prepare #{server.user}@#{server.hostname} #{_pk_setting}  -r#{_server_roles} -E#{fetch(:stage).to_s}"
+          _command = "cd chef && knife solo prepare #{server.user}@#{server.hostname} #{_pk_setting} #{_port_settings}  -r#{_server_roles} -E#{fetch(:stage).to_s}"
           pp _command
           system  _command
-          _command = "cd chef && knife solo cook #{server.user}@#{server.hostname} #{_pk_setting} -r#{_server_roles} -E#{fetch(:stage).to_s}"
+          _command = "cd chef && knife solo cook #{server.user}@#{server.hostname} #{_pk_setting} #{_port_settings} -r#{_server_roles} -E#{fetch(:stage).to_s}"
           pp _command
           system  _command
         end

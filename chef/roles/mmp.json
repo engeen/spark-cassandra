@@ -1,5 +1,5 @@
 {
-    "name": "app",
+    "name": "mmp",
     "description": "This is an app box server role",
     "chef_type": "role",
     "json_class": "Chef::Role",
@@ -16,11 +16,7 @@
             "recipe[postgresql]",
             "recipe[pmon_app]",
         	"recipe[rvm-ruby]",
-            "recipe[firefox]",
-            "recipe[xvfb]",
-            "recipe[nodejs]",
-            "recipe[chef_nginx]",
-            "recipe[papertrail]"
+            "recipe[nodejs]"
         ]
 
     }

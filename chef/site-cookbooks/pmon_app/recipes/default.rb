@@ -2,6 +2,11 @@ service 'firewalld' do
 	action :stop
 end
 
+service 'firewalld' do 
+  action :disable
+end
+
+
 
 user 'deployer' do
   comment 'Deployer user'

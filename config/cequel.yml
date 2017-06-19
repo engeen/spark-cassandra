@@ -17,14 +17,18 @@ test:
 
 production:
   hosts:
-#    - '62.213.76.75'
+    - '212.24.39.34'
+    - '212.24.39.35'
+    - '212.24.39.36'
+    - '212.24.39.37'
+    - '212.24.39.38'
   port: 9042
   keyspace: app_production
 #  username: 'myappuser'
 #  password: 'password1'
   max_retries: 3
   retry_delay: 0.5
-  newrelic: true
+  newrelic: false
   replication:
     class: SimpleStrategy
     replication_factor: 1

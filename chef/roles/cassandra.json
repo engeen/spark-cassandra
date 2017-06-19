@@ -8,7 +8,9 @@
       	"jdk_version" : "8"
       },
       "cassandra" : {
-        "rpc_address" : "192.168.5.3"
+        "rpc_address" : "212.24.39.34",
+        "seeds" : "127.0.0.1",
+        "cluster_name" : "Test Cluster"
       }
     },
     "override_attributes": {
