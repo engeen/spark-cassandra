@@ -36,6 +36,8 @@ gem 'openid_connect'
 gem 'redis', require: true
 gem 'sidekiq', require: true
 
+gem 'faker'
+
 gem 'cequel', '~> 3.0' #git: 'git@github.com:cequel/cequel.git' , branch: 'cassandra-3'
 #, :path => File.join(File.dirname(__FILE__), '/vendor/gems/cequel')
 gem 'activemodel-serializers-xml'

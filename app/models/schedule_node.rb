@@ -23,27 +23,37 @@ class ScheduleNode
     auto: 'auto'
   )
 
-  #column :id, :timeuuid, auto: true 
 
-  key    :carrier, :text
-  key    :cruise_num, :text      #номер рейса/номер поезда/маршрута
-	key    :departure, :timestamp  #дата отправления
+  key :f_id, :bigint #, auto: true
+  key :to_id, :bigint
+  key :cruise_num, :text      #номер рейса/номер поезда/маршрута
 
-	column :transport_type, :text, :index => true #enumeration of transport type
-	column :cruise_duration, :int #duration in minutes
-	column :cruise_class, :text   #enumeration of class
-	column :cruise_filter, :text, :index => true  #дубликат номера рейса для выборок
+  column :from_location, :text #, :index => true  #пункт отправления
+  column :to_location, :text #, :index => true    #пункт назначения
+  column :price, :decimal       #price in rubles
+  
+  column :departure_time, :timestamp
+  column :arrival_time, :timestamp
 
-	column :from_location, :text, :index => true  #пункт отправления
-	column :to_location, :text, :index => true    #пункт назначения
+ #  key    :carrier, :text
+	# key    :from_loc, :text
+ #  key    :departure_time_key, :timestamp
 
-	column :departure_time, :timestamp, :index => true #departure date-time
-	column :arrival_time, :timestamp, :index => true   #arrival date-time
-	column :arrival_date, :timestamp, :index => true   #extracted arrival date
 
-	column :price, :decimal       #price in rubles
+	# column :transport_type, :text, :index => true #enumeration of transport type
+	# column :cruise_duration, :int #duration in minutes
+	# column :cruise_class, :text   #enumeration of class
+
+
+	# column :to_location, :text, :index => true    #пункт назначения
+
+	# column :departure_time, :timestamp, :index => true #departure date-time
+	# column :arrival_time, :timestamp, :index => true   #arrival date-time
+	# column :arrival_date, :timestamp, :index => true   #extracted arrival date
+
+	# column :price, :decimal       #price in rubles
 	
-	column :created_at, :timestamp #Время сохранения записи
-	column :created_on, :timestamp #Дата сохранения записи
+	# column :created_at, :timestamp #Время сохранения записи
+	# column :created_on, :timestamp #Дата сохранения записи
 
 end

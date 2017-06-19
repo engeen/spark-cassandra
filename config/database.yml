@@ -21,6 +21,6 @@ development:
 production:
   <<: *default
   database: mmp_prod
-  host: 62.213.76.77
+#  host: 62.213.76.77
   username: mmp
   password: mmp

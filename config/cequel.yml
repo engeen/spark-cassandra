@@ -1,14 +1,14 @@
 development:
   hosts: 
-    - '192.168.2.3'
+    - '192.168.5.3'
   port: 9042
-  keyspace: app_development
+  keyspace: dev
   max_retries: 3
   retry_delay: 0.5
   newrelic: false
 
 test:
-  host: '192.168.2.3'
+  host: '192.168.5.3'
   port: 9042
   keyspace: app_test
   max_retries: 3
@@ -17,7 +17,7 @@ test:
 
 production:
   hosts:
-    - '62.213.76.75'
+#    - '62.213.76.75'
   port: 9042
   keyspace: app_production
 #  username: 'myappuser'

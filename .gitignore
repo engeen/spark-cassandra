@@ -32,3 +32,4 @@ chef/nodes/*
 /chef/cookbooks
 
 tmp
+*.jar

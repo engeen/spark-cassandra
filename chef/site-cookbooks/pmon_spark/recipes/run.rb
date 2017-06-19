@@ -7,7 +7,6 @@
 
 
 
-
 execute "Start thrift server" do
 	cwd '/home/spark'
     command "./thrift-cassandra-start.sh"

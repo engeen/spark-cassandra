@@ -117,8 +117,8 @@ Vagrant.configure("2") do |config|
     dev.vm.network :private_network, ip: $dev_ip
 
     # Forward the Rails server default port to the host
-    config.vm.network :forwarded_port, guest: 3000, host: 3000
-    config.vm.network :forwarded_port, guest: 4544, host: 4544
+   # config.vm.network :forwarded_port, guest: 3000, host: 3000
+   # config.vm.network :forwarded_port, guest: 4544, host: 4544
     #config.vm.network "private_network", ip: "192.168.33.10"
     # dev.vm.network "forwarded_port", guest: 3000, host: 3000, auto_correct: true
     # dev.vm.network "forwarded_port", guest: 80, host: 80, auto_correct: true

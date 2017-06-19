@@ -5,15 +5,7 @@
   "json_class": "Chef::Environment",
   "default_attributes": {
     "pmon_spark" : {
-      "cassandra_ip" : "62.213.76.75"
-    },
-    "papertrail" : {
-      "host_name" : "pmon.dev",
-      "log_host" : "logs5.papertrailapp.com",
-      "log_host_port" : "14924",
-      "log_files" : [
-        "/home/deployer/app/shared/log/parsing.log"
-      ]
+      "cassandra_ip" : "212.24.39.19"
     }
   },
   "override_attributes": {
@@ -21,7 +13,7 @@
       "user" : "deployer" 
     },
     "cassandra" : {
-      "rpc_address" : "62.213.76.75"
+      "rpc_address" : "212.24.39.19"
     },
   	"postgresql": {
   		"version": "9.5",

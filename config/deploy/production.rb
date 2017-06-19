@@ -8,6 +8,7 @@
 
   #======provision config ============
   #server "62.213.76.75", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
+  server "212.24.39.18", no_release: true, user: "root", roles: %w{spark}, ssh_options: { auth_methods: %w(publickey) }
   #server "62.213.76.76", no_release: true, user: "root", roles: %w{spark}, ssh_options: { auth_methods: %w(publickey) }
   #server "root@62.213.76.77", no_release: true,roles: %w{postgres redis pmon web}, ssh_options: { auth_methods: %w(publickey) } 
   #server "root@62.213.76.78", no_release: true,roles: %w{pmon}, ssh_options: { auth_methods: %w(publickey) } 
