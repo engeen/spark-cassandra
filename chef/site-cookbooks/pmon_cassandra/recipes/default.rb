@@ -1,3 +1,14 @@
+
+service "firewalld" do 
+  action :stop
+end
+
+service "firewalld" do 
+  action :disable
+end
+
+
+
 template '/etc/yum.repos.d/datastax.repo' do
   source 'datastax.repo.erb'
   owner 'root'
@@ -22,4 +33,8 @@ end
 
 service "cassandra" do
 	action :enable
+end
+
+service "cassandra" do
+  action :restart
 end

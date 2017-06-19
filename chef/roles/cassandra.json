@@ -10,7 +10,8 @@
       "cassandra" : {
         "rpc_address" : "212.24.39.34",
         "seeds" : "127.0.0.1",
-        "cluster_name" : "Test Cluster"
+        "cluster_name" : "Test Cluster",
+        "listen_address" : "localhost"
       }
     },
     "override_attributes": {

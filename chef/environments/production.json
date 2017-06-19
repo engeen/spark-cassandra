@@ -15,7 +15,8 @@
     "cassandra" : {
       "rpc_address" : "212.24.39.34",
       "seeds" : "212.24.39.34, 212.24.39.35, 212.24.39.36, 212.24.39.37, 212.24.39.38",
-      "cluster_name" : "MMPGraph"
+      "cluster_name" : "MMPGraph",
+      "listen_address" : "212.24.39.34"
     },
   	"postgresql": {
   		"version": "9.5",
