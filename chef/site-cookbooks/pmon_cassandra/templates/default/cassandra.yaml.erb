@@ -470,7 +470,7 @@ ssl_storage_port: 7001
 # you can specify which should be chosen using listen_interface_prefer_ipv6. If false the first ipv4
 # address will be used. If true the first ipv6 address will be used. Defaults to false preferring
 # ipv4. If there is only one address it will be selected regardless of ipv4/ipv6.
-listen_address: localhost
+listen_address: <%= node['ipaddress'] %>
 # listen_interface: eth0
 # listen_interface_prefer_ipv6: false
 
@@ -549,7 +549,7 @@ native_transport_port: 9042
 # you can specify which should be chosen using rpc_interface_prefer_ipv6. If false the first ipv4
 # address will be used. If true the first ipv6 address will be used. Defaults to false preferring
 # ipv4. If there is only one address it will be selected regardless of ipv4/ipv6.
-rpc_address: <%= node['cassandra']['rpc_address'] %>
+rpc_address: <%= node['ipaddress'] %>
 # rpc_interface: enp0s8
 # rpc_interface_prefer_ipv6: false
 
@@ -962,3 +962,5 @@ windows_timer_interval: 1
 # early. Any value size larger than this threshold will result into marking an SSTable
 # as corrupted.
 # max_value_size_in_mb: 256
+
+auto_bootstrap: false
