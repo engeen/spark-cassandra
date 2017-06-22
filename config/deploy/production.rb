@@ -7,21 +7,32 @@
 
 
   #======provision config ============
-  #server "62.213.76.75", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
-  server "root@212.24.39.18", no_release: true, user: "root", roles: %w{spark}, ssh_options: { auth_methods: %w(publickey) }
-  server "root@212.24.39.20", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
-  server "root@212.24.39.21", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
-  server "root@212.24.39.22", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  server "root@212.24.39.19", no_release: true, user: "root", roles: %w{mmp}, ssh_options: { auth_methods: %w(publickey) }
+
+  #server "root@212.24.39.18", no_release: true, user: "root", roles: %w{spark}, ssh_options: { auth_methods: %w(publickey) }
+  #server "root@212.24.39.20", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@212.24.39.21", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@212.24.39.22", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
 
 
   # server "root@212.24.39.34", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
-  server "root@212.24.39.35", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
-  # server "root@212.24.39.36", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
-  # server "root@212.24.39.37", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
+# server "root@212.24.39.35", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
+# server "root@212.24.39.36", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
+# server "root@212.24.39.37", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
   # server "root@212.24.39.38", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
 
 
-  server "root@212.24.39.19", no_release: true, user: "root", roles: %w{mmp}, ssh_options: { auth_methods: %w(publickey) }
+ #server "212.24.39.19", user: "deployer", roles: %w{app web db}, ssh_options: { auth_methods: %w(publickey) }
+
+
+
+
+
+
+
+
+
+  #server "root@212.24.39.19", no_release: true, user: "root", roles: %w{mmp}, ssh_options: { auth_methods: %w(publickey) }
   #server "212.24.39.19", user: 'deployer', roles: %w{app web db}, ssh_options: { auth_methods: %w(publickey password) } 
 
   #server "62.213.76.76", no_release: true, user: "root", roles: %w{spark}, ssh_options: { auth_methods: %w(publickey) }
