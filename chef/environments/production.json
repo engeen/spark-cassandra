@@ -15,13 +15,12 @@
     "cassandra" : {
       "rpc_address" : "212.24.39.34",
       "seeds" : "212.24.39.34, 212.24.39.35, 212.24.39.36, 212.24.39.37, 212.24.39.38",
-      "cluster_name" : "MMPGraph",
-      "listen_address" : "212.24.39.34"
+      "cluster_name" : "MMPGraph"
     },
   	"postgresql": {
   		"version": "9.5",
       "config" : {
-        "listen_addresses" : "0.0.0.0, 212.24.39.19"
+        "listen_addresses" : "0.0.0.0, 212.24.39.19, 212.24.39.18"
       },
   		"password": {
   			"postgres": "[eqghfccsim,kz"
@@ -33,7 +32,14 @@
         "user" : "all", 
         "addr" : "212.24.39.19/32", 
         "method" : "md5"
-      } ]
+      },
+      {
+        "type" :  "host",
+        "db" : "all",
+        "user" : "all", 
+        "addr" : "212.24.39.18/32", 
+        "method" : "md5"
+      }]
 
   	}
   }

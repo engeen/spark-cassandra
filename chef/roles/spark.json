@@ -18,7 +18,11 @@
         ],
         "production" : [
           "recipe[java]",
-          "recipe[pmon_spark::default]"
+          "recipe[pmon_spark::default]",
+          "recipe[pmon_app]",
+          "recipe[rvm-ruby]",
+          "recipe[nodejs]"
+
         ]
 
     }
