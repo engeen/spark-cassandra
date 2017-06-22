@@ -134,9 +134,9 @@ namespace :graph do
 
               #each cruises
               _cruise_number.times do 
-                _arr = (rt.distance / 700.0 * 3600.0).round.minutes.since(_dep) if transport_type == 'avia'
-                _arr = (rt.distance / 100.0 * 3600.0).round.minutes.since(_dep) if transport_type == 'rail'
-                _arr = (rt.distance / 70.0 * 3600.0).round.minutes.since(_dep) if transport_type == 'auto'
+                _arr = (rt.distance / 700.0 * 60.0).round.minutes.since(_dep) if transport_type == 'avia'
+                _arr = (rt.distance / 100.0 * 60.0).round.minutes.since(_dep) if transport_type == 'rail'
+                _arr = (rt.distance / 70.0 * 60.0).round.minutes.since(_dep) if transport_type == 'auto'
 
                 _price = rt.distance * 4 if transport_type == 'avia'
                 _price = rt.distance * 3 if transport_type == 'rail'
