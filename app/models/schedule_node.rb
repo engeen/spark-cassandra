@@ -34,6 +34,7 @@ class ScheduleNode
   
   column :departure_time, :timestamp
   column :arrival_time, :timestamp
+  column :transport_type, :text
 
  #  key    :carrier, :text
 	# key    :from_loc, :text

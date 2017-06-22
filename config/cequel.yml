@@ -17,13 +17,13 @@ test:
 
 production:
   hosts:
-    - '212.24.39.34'
+    #- '212.24.39.34'
     - '212.24.39.35'
     - '212.24.39.36'
     - '212.24.39.37'
-    - '212.24.39.38'
+    #- '212.24.39.38'
   port: 9042
-  keyspace: app_production
+  keyspace: mmp
 #  username: 'myappuser'
 #  password: 'password1'
   max_retries: 3

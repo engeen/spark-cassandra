@@ -26,9 +26,16 @@ template '/etc/cassandra/conf/cassandra.yaml' do
   mode '0755'
 end
 
+execute "firewall-cmd --permanent --add-port 7000/tcp --add-port 9042/tcp" do
+  user 'root'
+end
 
-service "cassandra" do
-	action :start
+execute "firewall-cmd --reload" do
+  user 'root'
+end
+
+execute 'systemctl daemon-reload' do
+  user 'root'
 end
 
 service "cassandra" do
@@ -36,5 +43,5 @@ service "cassandra" do
 end
 
 service "cassandra" do
-  action :restart
+	action :start
 end
