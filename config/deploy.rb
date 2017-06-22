@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock "3.8.1"
 
-set :application, "pmon"
-set :repo_url, "git@dev.aeron.agileprofi.ru:root/pmon.git"
+set :application, "mmp"
+set :repo_url, "git@dev.aeron.agileprofi.ru:root/mmp-proto.git"
 
 set :deploy_to, '/home/deployer/app'
 
