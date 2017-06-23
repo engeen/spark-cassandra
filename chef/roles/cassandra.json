@@ -23,7 +23,8 @@
         ],
         "production" : [
           "recipe[java]",
-          "recipe[pmon_cassandra]"
+          "recipe[pmon_cassandra]",
+          "recipe[newrelic]"
         ]
 
     }
