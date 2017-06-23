@@ -6,56 +6,49 @@
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 
 
-  #======provision config ============
+#=====PROVISION APP
 #  server "root@212.24.39.19", no_release: true, user: "root", roles: %w{mmp postgres}, ssh_options: { auth_methods: %w(publickey) }
 
+#=====PROVISION SPARK
   #server "root@212.24.39.18", no_release: true, user: "root", roles: %w{spark}, ssh_options: { auth_methods: %w(publickey) }
   #server "root@212.24.39.20", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
   #server "root@212.24.39.21", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
   #server "root@212.24.39.22", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@62.213.76.250", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@62.213.76.251", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@62.213.76.252", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@62.213.76.253", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@62.213.76.254", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@212.24.39.38", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@212.24.39.34", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@217.23.156.162", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@217.23.156.163", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@217.23.156.164", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@217.23.156.165", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@217.23.156.166", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+  #server "root@217.23.156.90", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
+
+#======PROVISION CASSANDRA
+  #server "root@212.24.39.35", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) } 
+  #server "root@212.24.39.36", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
+  #server "root@212.24.39.37", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
+  server "root@217.23.156.170", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
+  server "root@217.23.156.171", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
+  server "root@217.23.156.172", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
 
 
-  # server "root@212.24.39.34", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
-# server "root@212.24.39.35", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
-# server "root@212.24.39.36", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
-# server "root@212.24.39.37", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
-  # server "root@212.24.39.38", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
+  #server "212.24.39.19", user: "deployer", roles: %w{app web db}, ssh_options: { auth_methods: %w(publickey) }
 
 
- server "212.24.39.19", user: "deployer", roles: %w{app web db}, ssh_options: { auth_methods: %w(publickey) }
+#rpm -Uvh https://download.newrelic.com/pub/newrelic/el5/i386/newrelic-repo-5-3.noarch.rpm 
+#yum install -y newrelic-sysmond 
 
-
-
-
-
-
-
-
-
-  #server "root@212.24.39.19", no_release: true, user: "root", roles: %w{mmp}, ssh_options: { auth_methods: %w(publickey) }
-  #server "212.24.39.19", user: 'deployer', roles: %w{app web db}, ssh_options: { auth_methods: %w(publickey password) } 
-
-  #server "62.213.76.76", no_release: true, user: "root", roles: %w{spark}, ssh_options: { auth_methods: %w(publickey) }
-
-  #server "root@62.213.76.77", no_release: true,roles: %w{postgres redis pmon web}, ssh_options: { auth_methods: %w(publickey) } 
-  #server "root@62.213.76.78", no_release: true,roles: %w{pmon}, ssh_options: { auth_methods: %w(publickey) } 
-  #server "root@217.23.156.98", no_release: true,roles: %w{pmon}, ssh_options: { auth_methods: %w(publickey) } 
-  #server "root@217.23.156.99", no_release: true,roles: %w{pmon}, ssh_options: { auth_methods: %w(publickey) } 
-  #server "root@217.23.156.100", no_release: true,roles: %w{pmon}, ssh_options: { auth_methods: %w(publickey) } 
-  #server "root@217.23.156.101", no_release: true,roles: %w{pmon}, ssh_options: { auth_methods: %w(publickey) } 
-  #server "root@217.23.156.102", no_release: true,roles: %w{pmon}, ssh_options: { auth_methods: %w(publickey) } 
-
-  #======deployment config ==============
-  # server "62.213.76.77", user: 'deployer', roles: %w{app web db sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  # server "62.213.76.78", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  # server "217.23.156.98", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  # server "217.23.156.99", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  # server "217.23.156.100", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  # server "217.23.156.101", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
-  # server "217.23.156.102", user: 'deployer', roles: %w{app sidekiq}, ssh_options: { auth_methods: %w(publickey password) } 
+#nrsysmond-config --set license_key=69ce0ffeb1ab7e55ec8a988c8d050f513a3d0ffb
+#/etc/init.d/newrelic-sysmond start
 
 
 
+ 
 # role-based syntax
 # ==================
 

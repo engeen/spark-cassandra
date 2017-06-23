@@ -5,7 +5,7 @@
   "json_class": "Chef::Environment",
   "default_attributes": {
     "pmon_spark" : {
-      "cassandra_ip" : "212.24.39.34"
+      "cassandra_ip" : "212.24.39.35, 212.24.39.36, 212.24.39.37, 217.23.156.170, 217.23.156.171, 217.23.156.172"
     }
   },
   "override_attributes": {
@@ -13,8 +13,8 @@
       "user" : "deployer" 
     },
     "cassandra" : {
-      "rpc_address" : "212.24.39.34",
-      "seeds" : "212.24.39.34, 212.24.39.35, 212.24.39.36, 212.24.39.37, 212.24.39.38",
+      "rpc_address" : "212.24.39.35",
+      "seeds" : "212.24.39.35, 212.24.39.36, 212.24.39.37, 217.23.156.170, 217.23.156.171, 217.23.156.172",
       "cluster_name" : "MMPGraph"
     },
   	"postgresql": {
