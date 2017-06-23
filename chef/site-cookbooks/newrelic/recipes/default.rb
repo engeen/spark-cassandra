@@ -1,8 +1,8 @@
 
-execute 'get newrelic rpm' do
-  user 'root'
-  command 'rpm -Uvh https://download.newrelic.com/pub/newrelic/el5/i386/newrelic-repo-5-3.noarch.rpm'
-end
+# execute 'get newrelic rpm' do
+#   user 'root'
+#   command 'rpm -Uvh https://download.newrelic.com/pub/newrelic/el5/i386/newrelic-repo-5-3.noarch.rpm'
+# end
 
 yum_package 'newrelic-sysmond'
 
@@ -19,3 +19,6 @@ end
 service 'newrelic-sysmond' do
   action :start
 end
+
+#rm -rf /var/lib/cassandra/data/system/*
+#JVM_OPTS="$JVM_OPTS -Dcassandra.consistent.rangemovement=false"

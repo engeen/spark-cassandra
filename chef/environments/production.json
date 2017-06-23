@@ -13,7 +13,7 @@
       "user" : "deployer" 
     },
     "cassandra" : {
-      "seeds" : "212.24.39.35, 212.24.39.36, 212.24.39.37",
+      "seeds" : "212.24.39.35",
       "cluster_name" : "MMPGraph"
     },
   	"postgresql": {
