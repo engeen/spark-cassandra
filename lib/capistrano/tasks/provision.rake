@@ -69,7 +69,7 @@ namespace :provision do
           #_command = "cd chef && knife solo prepare #{server.user}@#{server.hostname} #{_pk_setting} #{_port_settings}  -r#{_server_roles} -E#{fetch(:stage).to_s}"
           #pp _command
           #system  _command
-          _command = "cd chef && knife solo cook #{server.user}@#{server.hostname} #{_pk_setting} #{_port_settings} -r#{_server_roles} -E#{fetch(:stage).to_s}"
+          _command = "cd chef && knife solo cook #{server.user}@#{server.hostname} #{_pk_setting} #{_port_settings} -r#{_server_roles} -E#{fetch(:stage).to_s} --no-chef-check"
           pp _command
           system  _command
         end

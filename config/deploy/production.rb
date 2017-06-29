@@ -29,7 +29,7 @@
   #server "root@217.23.156.90", no_release: true, user: "root", roles: %w{spark_slave}, ssh_options: {  auth_methods: %w(publickey) }
 
 #======PROVISION CASSANDRA
-  #server "root@212.24.39.35", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) } 
+  server "root@212.24.39.35", no_release: true, user: "root", roles: %w{cassandra spark}, ssh_options: { auth_methods: %w(publickey) } 
   #server "root@212.24.39.36", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
   #server "root@212.24.39.37", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
   #server "root@217.23.156.170", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
@@ -37,7 +37,7 @@
   #server "root@217.23.156.172", no_release: true, user: "root", roles: %w{cassandra}, ssh_options: { auth_methods: %w(publickey) }
 
 
-  server "212.24.39.19", user: "deployer", roles: %w{app web db}, ssh_options: { auth_methods: %w(publickey) }
+  #server "212.24.39.19", user: "deployer", roles: %w{app web db}, ssh_options: { auth_methods: %w(publickey) }
 
 
 #rpm -Uvh https://download.newrelic.com/pub/newrelic/el5/i386/newrelic-repo-5-3.noarch.rpm 
